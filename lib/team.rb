@@ -31,10 +31,20 @@ class Team
     captain.name
   end
 
+  def whole_captain_player_class
+    players_in_ascending_order_by_salary = @players.sort_by do |player|
+      player.salary
+    end
+
+    players_in_descending_order_by_salary = players_in_ascending_order_by_salary.reverse
+
+    captain = players_in_descending_order_by_salary.first
+  end
+
   def positions_filled
     positions_filled = @players.map do |player|
       player.position
-    end 
+    end
   end
 
 end

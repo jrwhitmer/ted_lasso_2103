@@ -94,4 +94,5 @@ describe Team do
 
     expect(richmond.positions_filled).to eq(["Center Midfielder", "Right-back Defender"])
   end
+  
 end
